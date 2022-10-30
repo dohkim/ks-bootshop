@@ -59,27 +59,7 @@
 
 <body class="{{ request.page_type | prepend: 'page-type-' }}">
 
-<div class="Polaris-Labelled--hidden">
-  <div class="Polaris-Labelled__LabelWrapper">
-    <div class="Polaris-Label">
-      <label id="PolarisDropZone1Label" for="PolarisDropZone1" class="Polaris-Label__Text">Upload files</label>
-    </div>
-  </div>
-  <div class="Polaris-DropZone Polaris-DropZone--hasOutline Polaris-DropZone--sizeLarge" aria-disabled="false">
-    <span class="Polaris-VisuallyHidden">
-      <input id="PolarisDropZone1" type="file" multiple="" autocomplete="off">
-    </span>
-    <div class="Polaris-DropZone__Container">
-      <div class="Polaris-DropZone-FileUpload Polaris-DropZone-FileUpload--large">
-        <div class="Polaris-Stack Polaris-Stack--vertical Polaris-Stack--spacingTight">
-          <div class="Polaris-Stack__Item">
-            <div class="Polaris-DropZone-FileUpload__Action">Add files</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
   
     <a class="visually-hidden-focusable" href="#main">
         {{ 'general.accessibility.skip_content' | t }}
@@ -89,6 +69,42 @@
         section 'announcement-bar' 
         section 'navbar' 
     %}
+    <div class="Polaris-Banner Polaris-Banner--hasDismiss Polaris-Banner--withinPage" tabindex="0" role="status" aria-live="polite" aria-labelledby="PolarisBanner1Heading" aria-describedby="PolarisBanner1Content">
+      <div class="Polaris-Banner__Dismiss">
+        <button class="Polaris-Button Polaris-Button--plain Polaris-Button--iconOnly" aria-label="Dismiss notification" type="button">
+          <span class="Polaris-Button__Content">
+            <span class="Polaris-Button__Icon">
+              <span class="Polaris-Icon">
+                <span class="Polaris-VisuallyHidden">
+                </span>
+                <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                  <path d="M6.707 5.293a1 1 0 0 0-1.414 1.414l3.293 3.293-3.293 3.293a1 1 0 1 0 1.414 1.414l3.293-3.293 3.293 3.293a1 1 0 0 0 1.414-1.414l-3.293-3.293 3.293-3.293a1 1 0 0 0-1.414-1.414l-3.293 3.293-3.293-3.293Z">
+                  </path>
+                </svg>
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="Polaris-Banner__Ribbon">
+        <span class="Polaris-Icon Polaris-Icon--colorBase Polaris-Icon--applyColor">
+          <span class="Polaris-VisuallyHidden">
+          </span>
+          <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 20c5.514 0 10-4.486 10-10s-4.486-10-10-10-10 4.486-10 10 4.486 10 10 10zm1-6a1 1 0 1 1-2 0v-4a1 1 0 1 1 2 0v4zm-1-9a1 1 0 1 0 0 2 1 1 0 0 0 0-2z">
+            </path>
+          </svg>
+        </span>
+      </div>
+      <div class="Polaris-Banner__ContentWrapper">
+        <div class="Polaris-Banner__Heading" id="PolarisBanner1Heading">
+          <p class="Polaris-Heading">Order archived</p>
+        </div>
+        <div class="Polaris-Banner__Content" id="PolarisBanner1Content">
+          <p>This order was archived on March 7, 2017 at 3:12pm EDT.</p>
+        </div>
+      </div>
+    </div>
 
     <main id="main" role="main">
         {{ content_for_layout }}
